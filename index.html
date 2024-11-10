@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealEstate Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #006aff;
+            color: white;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        #search-form {
+            margin-bottom: 2rem;
+        }
+        #property-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .property-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>RealEstate Finder</h1>
+            <div>
+                <a href="#" id="login-btn">Login</a>
+                <a href="#" id="signup-btn">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form id="search-form">
+            <input type="text" id="location" placeholder="Enter location">
+            <select id="property-type">
+                <option value="">All Types</option>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="condo">Condo</option>
+            </select>
+            <input type="number" id="min-price" placeholder="Min Price">
+            <input type="number" id="max-price" placeholder="Max Price">
+            <button type="submit">Search</button>
+        </form>
+        <div id="property-list"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
