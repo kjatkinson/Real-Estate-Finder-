@@ -9,22 +9,36 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column; /* Stack header and main vertically */
+            align-items: center; /* Center content horizontally */
+            height: 100vh; /* Full height */
+            background-color: #f4f4f4; /* Optional: background color */
         }
         header {
             background-color: #006aff;
             color: white;
             padding: 1rem;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            width: 100%; /* Full width */
+            text-align: center; /* Center header text */
+            position: fixed; /* Fix header to the top */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it stays above other content */
         }
         main {
-            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            flex-grow: 1; /* Allow main to grow and take available space */
+            margin-top: 60px; /* Space for fixed header */
         }
         #search-form {
-            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center elements */
+            gap: 1rem; /* Space between elements */
         }
         #property-list {
             display: grid;
@@ -45,13 +59,7 @@
 </head>
 <body>
     <header>
-        <nav>
-            <h1>RealEstate Finder</h1>
-            <div>
-                <a href="#" id="login-btn">Login</a>
-                <a href="#" id="signup-btn">Sign Up</a>
-            </div>
-        </nav>
+        <h1>RealEstate Finder</h1>
     </header>
     <main>
         <form id="search-form">
