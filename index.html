@@ -10,50 +10,110 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column; /* Stack header and main vertically */
-            align-items: center; /* Center content horizontally */
-            height: 100vh; /* Full height */
-            background-color: #f4f4f4; /* Optional: background color */
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-image: url('home.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
+
         header {
             background-color: #006aff;
             color: white;
             padding: 1rem;
-            width: 100%; /* Full width */
-            text-align: center; /* Center header text */
-            position: fixed; /* Fix header to the top */
-            top: 0; /* Align to the top */
-            left: 0; /* Align to the left */
-            z-index: 1000; /* Ensure it stays above other content */
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
+
+        .hero {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
         main {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Center content vertically */
-            align-items: center; /* Center content horizontally */
-            flex-grow: 1; /* Allow main to grow and take available space */
-            margin-top: 60px; /* Space for fixed header */
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            margin-top: 60px;
+            width: 100%;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
         }
+
         #search-form {
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center elements */
-            gap: 1rem; /* Space between elements */
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            width: 100%;
+            gap: 1rem;
         }
+
+        #search-form input,
+        #search-form select,
+        #search-form button {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #search-form button {
+            background-color: #006aff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #search-form button:hover {
+            background-color: #0056cc;
+        }
+
         #property-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 2rem;
         }
+
         .property-card {
             border: 1px solid #ddd;
             padding: 1rem;
             border-radius: 4px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .property-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -61,6 +121,11 @@
     <header>
         <h1>RealEstate Finder</h1>
     </header>
+
+    <section class="hero">
+        <h1>Welcome to RealEstate Finder</h1>
+    </section>
+
     <main>
         <form id="search-form">
             <input type="text" id="location" placeholder="Enter location">
@@ -76,6 +141,7 @@
         </form>
         <div id="property-list"></div>
     </main>
+
     <script src="app.js"></script>
 </body>
 </html>
