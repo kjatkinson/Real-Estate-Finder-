@@ -2,7 +2,7 @@
 
 A modern web application that helps users find their perfect property by fetching real-time listings from a real estate API. Built with vanilla JavaScript and modern CSS, this application provides an intuitive interface for property searching and filtering.
 
-![Real Estate Finder Demo](https://via.placeholder.com/800x400)
+![Real Estate Finder Demo]<img src = "PROJECTIMG.png" width ="600" alt-"Real-Estate-Finder-">
 
 ## 🌟 Features
 
